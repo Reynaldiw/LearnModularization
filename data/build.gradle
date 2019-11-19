@@ -1,0 +1,10 @@
+apply from: "$rootDir/common.gradle"
+
+dependencies {
+    implementation project(Modules.network)
+
+    implementation Retrofit.retrofit
+
+    implementation Android.gson
+
+}

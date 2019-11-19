@@ -1,0 +1,23 @@
+apply from: "$rootDir/common.gradle"
+
+dependencies {
+    //modules
+    api project(Modules.network)
+    api project(Modules.data)
+
+    // Android Support
+    implementation Android.ktx
+    implementation Android.appcompat
+    implementation Android.constraintlayout
+
+    // Netowrk
+    implementation Retrofit.okHttpLogging
+    implementation Retrofit.gsonConverter
+    implementation Retrofit.retrofit
+
+    //jetpack
+    implementation Jetpack.recyclerView
+    implementation Jetpack.lifecycleViewmodel
+    implementation Jetpack.lifecycle
+    kapt Jetpack.lifecycleCompiler
+}
